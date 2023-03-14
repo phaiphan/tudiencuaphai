@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển của Phái</title>
+   
+</head>
+<body>
+    <p>Nhập vào đây</p>
+    <input type="text" id="tim">
+    <button onclick="trans()">Dịch</button>
+    <p id="intaiday"></p>
+    <script>
+        let E=["watermelon","apple","banana","orange","lemon","tangerine"]
+        let V=[" quả dưa hấu"," quả táo","quả chuối","quả cam","quả chanh","quả quýt"]
+        function trans() {
+            let i=E.indexOf(document.getElementById('tim').value)
+            document.getElementById('intaiday').innerHTML=V[i]
+            if (i== -1) document.getElementById('intaiday').innerHTML= "từ này không có trong từ điển của Phái"
+        }
+    </script>
+</body>
+</html>
